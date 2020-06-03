@@ -1,11 +1,13 @@
 ---
-title: "MitoWomen - Women in Mitochondria"
+title: "MitoWomen: Women in Mitochondria"
 ---
 
 ```{r out.width='100%', out.height='300px', echo=FALSE, fig.align='center'}
 library(knitr)
 include_graphics("Mitowomen_banner4.png")
 ```
+
+<br>
 
 Hello, Website!
 
