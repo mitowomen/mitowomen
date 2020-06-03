@@ -1,0 +1,27 @@
+name: "women-in-mitochondria"
+output_dir: "docs"
+output:
+  html_document:
+    theme: flatly
+navbar:
+  title: "Women in Mitochondria"
+  left:
+    - text: ""
+      icon: fa-home
+      href: index.html
+    - text: "Join"
+      href: join.html
+    - text: "Map"
+      href: map.html
+    - text: "Table"
+      href: table.html
+    - text: "About"
+      href: about.html
+
+
+  right:
+    - icon: ion-social-twitter
+      href: https://twitter.com/mitowomen
+    - icon: fa-envelope
+      href: mailto:mitowomen@gmail.com
+
