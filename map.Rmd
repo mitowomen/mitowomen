@@ -3,3 +3,57 @@ title: "MitoWomen: Map"
 ---
 
 More about this website.
+
+```{r include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo=FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+
+library(dplyr)
+library(leaflet)
+
+```
+
+
+
+```{r}
+
+dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1MfJyhC0fLeObYGcCEV3hZcgs5EhEmW1glSIXdaZRch0/edit?usp=sharing")
+
+dat$Longitude = "-5.97"
+dat$Latitude = "37.35"
+
+datos <- dat %>%
+  mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
+  mutate(Name = ifelse(!is.na(Website), 
+                       paste0('<a href="', Website, '"target="_blank">', Name, '</a>'),
+                       Name)) %>%
+  dplyr::select(Name, Longitude, Latitude) %>%
+  mutate(Longitude = as.numeric(Longitude),
+         Latitude = as.numeric(Latitude))
+
+```
+
+
+```{r out.width='100%'}
+
+icon.mw <- makeIcon(
+  iconUrl = "logo_400x400.jpg",
+  iconWidth = 30, iconHeight = 30,
+  iconAnchorX = 15, iconAnchorY = 15
+)
+
+leaflet(datos) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addMarkers(
+    ~Longitude, ~Latitude,
+    #label = ~Name,
+    popup = ~Name,
+    icon = icon.mw
+    #clusterOptions = markerClusterOptions()
+  )
+
+```
+
