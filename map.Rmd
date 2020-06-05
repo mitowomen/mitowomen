@@ -24,9 +24,6 @@ library(leaflet)
 dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1MfJyhC0fLeObYGcCEV3hZcgs5EhEmW1glSIXdaZRch0/edit?usp=sharing")
 
 
-# dat$Longitude = c("-5.94", "-3.7")
-# dat$Latitude = c("37.36", "40.4")
-
 datos <- dat %>%
   mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
   mutate(Name = ifelse(!is.na(Website), 
