@@ -1,8 +1,9 @@
 ---
-title: "MitoWomen: Map"
+title: "MitoWomen Map"
 ---
 
-More about this website.
+This is an interactive map. Clicking on the mitochondria logo will open a pop-up with further information.
+
 
 ```{r include=FALSE}
 library(knitr)
@@ -22,8 +23,9 @@ library(leaflet)
 
 dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1MfJyhC0fLeObYGcCEV3hZcgs5EhEmW1glSIXdaZRch0/edit?usp=sharing")
 
-dat$Longitude = "-5.97"
-dat$Latitude = "37.35"
+
+# dat$Longitude = c("-5.94", "-3.7")
+# dat$Latitude = c("37.36", "40.4")
 
 datos <- dat %>%
   mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
@@ -37,19 +39,27 @@ datos <- dat %>%
 ```
 
 
+```{r}
+## could use CoordinateCleaner::cc_coun to check if coords within stated country
+# https://rdrr.io/cran/CoordinateCleaner/man/cc_coun.html
+
+```
+
+
 ```{r out.width='100%'}
 
 icon.mw <- makeIcon(
-  iconUrl = "logo_400x400.jpg",
-  iconWidth = 30, iconHeight = 30,
-  iconAnchorX = 15, iconAnchorY = 15
+  iconUrl = "chincheta.png",
+  iconWidth = 20, iconHeight = 20,
+  iconAnchorX = 10, iconAnchorY = 10
 )
 
 leaflet(datos) %>%
-  addProviderTiles(providers$CartoDB.Positron) %>% 
+  fitBounds(-176, -50, 176, 50) %>%
+  addProviderTiles(providers$CartoDB.Positron, 
+                   options = providerTileOptions(noWrap = TRUE)) %>% 
   addMarkers(
     ~Longitude, ~Latitude,
-    #label = ~Name,
     popup = ~Name,
     icon = icon.mw
     #clusterOptions = markerClusterOptions()

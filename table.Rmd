@@ -1,5 +1,5 @@
 ---
-title: "MitoWomen: Table"
+title: "MitoWomen database"
 ---
 
 Here you can search the full Women in Mitochondria database.

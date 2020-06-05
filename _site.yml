@@ -13,7 +13,7 @@ navbar:
       href: join.html
     - text: "Map"
       href: map.html
-    - text: "Table"
+    - text: "Database"
       href: table.html
     - text: "About"
       href: about.html
