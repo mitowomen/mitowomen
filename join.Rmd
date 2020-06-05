@@ -4,6 +4,9 @@ title: "Join the MitoWomen database"
 
 Please fill in and submit this form to join the Women in Mitochondria initiative! Your data will appear on the [table](table.html) and, if you provide coordinates, also in the [map](map.html).
 
+If you can't see the form below, please [click here](https://docs.google.com/forms/d/e/1FAIpQLSdedR4srTLA0meG7HcyfS0YbOHqcqFaUluB3sGanLxPBbCHmA/viewform).
+
+
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_url("https://docs.google.com/forms/d/e/1FAIpQLSdedR4srTLA0meG7HcyfS0YbOHqcqFaUluB3sGanLxPBbCHmA/viewform", height = "800px")
 ```
