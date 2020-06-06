@@ -8,8 +8,8 @@ knitr::include_graphics("banner_expanded_1.png")
 
 <br>
 
-Hello, Website!
+We are two mito-scientists, who inspired by others such as #500WomenScientist, #WomeninMalaria, #WomeninSoilScience or #Womenin Microbiology, decided to start a platform to make more visible the women working in the mitochondrial field. 
 
-For more information about simple R Markdown websites, please read the documentation at https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html.
+We have the aim to contribute to accelerating equality and diversity in the mitochondrial field. This database intends not only to create a network for collaboration and support but also to boost women representation on editorial boards, as keynote speakers in conferences, in invited special issues, as reviewers, on grant funding panels or as expert researchers for media consultation or interviews.
 
-Please also note that simple R Markdown sites are _not_ based on **blogdown**. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use **blogdown** instead: https://github.com/rstudio/blogdown.
+We are firmly convinced that diversity positively impacts science. For this reason, with this initiative, we aim not only to give visibility to the women who work in the mitochondrial field but also to be a platform where women from all over the world are represented.
