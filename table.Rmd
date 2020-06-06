@@ -12,10 +12,8 @@ knitr::opts_chunk$set(echo=FALSE, message = FALSE, warning = FALSE)
 ```
 
 ```{r}
-
 library(dplyr)
 library(DT)
-
 ```
 
 
@@ -25,6 +23,7 @@ dat <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1MfJyhC0fLeObY
 
 datos <- dat %>%
   dplyr::select(-`Marca temporal`, -starts_with("If you want")) %>%
+  dplyr::arrange(`Last name`) %>%
   mutate(Name = paste(`Last name`, `First name`, sep = " ")) %>%
   mutate(Name = ifelse(!is.na(Website), 
                        paste0('<a href="', Website, '"target="_blank">', Name, '</a>'),
