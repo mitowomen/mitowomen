@@ -33,6 +33,12 @@ datos <- dat %>%
   mutate(Longitude = as.numeric(Longitude),
          Latitude = as.numeric(Latitude))
 
+
+## jitter coords a bit so that points don't overlap completely in the map
+datos <- datos %>%
+  mutate(Longitude = jitter(Longitude, amount = 0.05),
+         Latitude = jitter(Latitude, amount = 0.05))
+
 ```
 
 
