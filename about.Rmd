@@ -6,4 +6,6 @@ We intend to build a broad community, but in case you wonder, this movement was 
 
 For more information you can contact us also at mitowomen@gmail.com or [mitowomen](https://twitter.com/mitowomen) in Twitter.
 
+We have created a Slack workspace to boost networking among Mitowomen and help to create a real community. If you are in the database but not received yet the invitation to Slack, please write to mitowomen@gmail.com.
+
 This website is made with [Rmarkdown](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html) and the code is publicly available [here](https://github.com/mitodisease/mitowomen). If you have some basic knowledge of R/Rmarkdown and git/GitHub it should relatively easy to adapt for similar initiatives.
