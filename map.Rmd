@@ -49,7 +49,7 @@ datos <- datos %>%
 ```
 
 
-```{r}
+```{r out.width='100%'´}
 
 icon.mw <- makeIcon(
   iconUrl = "chincheta.png",
