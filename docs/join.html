@@ -13,8 +13,8 @@
 
 <title>Join the MitoWomen database</title>
 
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -63,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -235,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -299,7 +303,7 @@ $(document).ready(function () {
 
 <p>Please fill in and submit this form to join the Women in Mitochondria initiative! Your data will appear on the <a href="table.html">table</a> and, if you provide coordinates, also in the <a href="map.html">map</a>.</p>
 <p>If you can’t see the form below, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSdedR4srTLA0meG7HcyfS0YbOHqcqFaUluB3sGanLxPBbCHmA/viewform">click here</a>.</p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdedR4srTLA0meG7HcyfS0YbOHqcqFaUluB3sGanLxPBbCHmA/viewform" width="100%" height="800px">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdedR4srTLA0meG7HcyfS0YbOHqcqFaUluB3sGanLxPBbCHmA/viewform" width="100%" height="800px" data-external="1">
 </iframe>
 
 
